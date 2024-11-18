@@ -16,3 +16,11 @@ Quiz No6
 
 
 
+ Console.WriteLine("Insert First No");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Insert Second No");
+            int num2 = int.Parse(Console.ReadLine());
+
+            int total = num1 + num2;
+
+            Console.WriteLine("Total For No1 + No2:" + total);

@@ -1,1 +1,9 @@
+Quiz No6
+//No3
+            string dessert = "strawberry pie";
+            bool found = dessert.StartsWith("strawberry");
+
+            Console.WriteLine(found);
+
+
 

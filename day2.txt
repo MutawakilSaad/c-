@@ -6,4 +6,13 @@ Quiz No6
             Console.WriteLine(found);
 
 
+//No4
+
+ string str1 = "   Hello Wolrd    ";
+            string str2 = str1.TrimStart();
+            Console.WriteLine(str2);
+            str2 = str2.TrimEnd();
+            Console.WriteLine(str2);
+
+
 

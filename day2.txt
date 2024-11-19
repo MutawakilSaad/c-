@@ -88,3 +88,71 @@ class Program {
         Console.WriteLine("Total pay: $" + totalPay.ToString("F2"));
     }
 }
+
+#######################################################################
+
+using System;
+
+class PasswordValidation {
+    static void Main() {
+        Console.WriteLine("Please enter your password:");
+        string password = Console.ReadLine();
+
+        if (IsValidPassword(password)) {
+            Console.WriteLine("Password is valid.");
+        } else {
+            Console.WriteLine("Password is invalid.");
+        }
+    }
+
+    static bool IsValidPassword(string password) {
+        if (password.Length < 8) {
+            Console.WriteLine("Password must be at least 8 characters long.");
+            return false;
+        }
+
+        if (!ContainsUpperCase(password)) {
+            Console.WriteLine("Password must contain at least one uppercase letter.");
+            return false;
+        }
+
+        if (!ContainsLowerCase(password)) {
+            Console.WriteLine("Password must contain at least one lowercase letter.");
+            return false;
+        }
+
+        if (!ContainsDigit(password)) {
+            Console.WriteLine("Password must contain at least one digit.");
+            return false;
+        }
+
+        return true;
+    }
+
+    static bool ContainsUpperCase(string input) {
+        foreach (char c in input) {
+            if (char.IsUpper(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static bool ContainsLowerCase(string input) {
+        foreach (char c in input) {
+            if (char.IsLower(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static bool ContainsDigit(string input) {
+        foreach (char c in input) {
+            if (char.IsDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

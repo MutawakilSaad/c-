@@ -48,3 +48,43 @@ if condition:
             {
                 Console.WriteLine("You are Senior");
             }
+
+
+
+
+
+##############################################
+
+using System;
+
+class Program {
+    static void Main() {
+        // الثوابت
+        const int BASE_HOURS = 40;
+        const double OT_MULTIPLIER = 1.5;
+
+        // قراءة عدد ساعات العمل
+        Console.Write("Please enter the number of hours worked: ");
+        double hoursWorked = double.Parse(Console.ReadLine());
+
+        // قراءة أجر الساعة
+        Console.Write("Please enter your hourly pay rate: ");
+        double hourlyPayRate = double.Parse(Console.ReadLine());
+
+        // متغير لتخزين الأجر الإجمالي
+        double totalPay;
+
+        // حساب الأجر
+        if (hoursWorked > BASE_HOURS) {
+            // حساب الساعات الزائدة
+            double overtimeHours = hoursWorked - BASE_HOURS;
+            totalPay = (BASE_HOURS * hourlyPayRate) + (overtimeHours * hourlyPayRate * OT_MULTIPLIER);
+        } else {
+            // حساب الأجر للساعات الأساسية فقط
+            totalPay = hoursWorked * hourlyPayRate;
+        }
+
+        // طباعة الأجر الإجمالي
+        Console.WriteLine("Total pay: $" + totalPay.ToString("F2"));
+    }
+}

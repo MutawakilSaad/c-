@@ -24,3 +24,27 @@ Quiz No6
             int total = num1 + num2;
 
             Console.WriteLine("Total For No1 + No2:" + total);
+
+
+###########################################
+if condition:
+
+            Console.Write("Pls enter your age:");
+            int age = int.Parse(Console.ReadLine());
+
+            if(age < 13)
+            {
+                Console.WriteLine("You are Child");
+            }
+            else if (age < 20)
+            {
+                Console.WriteLine("You are Tennager");
+            }
+            else if (age < 65)
+            {
+                Console.WriteLine("You are adult");
+            }
+            else
+            {
+                Console.WriteLine("You are Senior");
+            }

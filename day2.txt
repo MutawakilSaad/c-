@@ -249,3 +249,60 @@ class SimpleCalculator {
     }
 }
 
+################################
+
+using System;
+
+class SimpleCalculator {
+    static void Main() {
+        bool continueCalculating = true;
+
+        while (continueCalculating) {
+            Console.Write("Enter the first number: ");
+            double num1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the second number: ");
+            double num2 = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter the operation (+, -, *, /): ");
+            char operation = Console.ReadLine()[0];
+
+            double result = 0;
+            bool validOperation = true;
+
+            switch (operation) {
+                case '+':
+                    result = Addition(num1, num2);
+                    break;
+                case '-':
+                    result = Subtraction(num1, num2);
+                    break;
+                case '*':
+                    result = Multiplication(num1, num2);
+                    break;
+                case '/':
+                    try {
+                        result = Division(num1, num2);
+                    } catch (DivideByZeroException) {
+                        Console.WriteLine("Division by zero is not allowed.");
+                        validOperation = false;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation.");
+                    validOperation = false;
+                    break;
+            }
+
+            if (validOperation) {
+                Console.WriteLine("Result: " + result);
+            }
+
+            Console.Write("Do you want to perform another calculation? (yes/no): ");
+            string answer = Console.ReadLine().ToLower();
+            continueCalculating = answer == "yes";
+        }
+    }
+
+    // ... rest of your calculation methods
+}

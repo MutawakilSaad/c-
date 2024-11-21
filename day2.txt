@@ -306,3 +306,49 @@ class SimpleCalculator {
 
     // ... rest of your calculation methods
 }
+
+
+#########################
+Day 5
+########################
+using System;
+
+public class Box {
+    // تعريف الخصائص (الأبعاد)
+    public double width;
+    public double height;
+    public double depth;
+
+    // دالة لحساب الحجم
+    public double CalculateVolume() {
+        return width * height * depth; // حساب الحجم بضرب الأبعاد الثلاثة
+    }
+}
+
+
+
+class Program {
+    public static void Main(string[] args) {
+        // إنشاء كائنين من صنف Box
+        Box box1 = new Box();
+        Box box2 = new Box();
+
+        // إعطاء قيم للأبعاد لكل كائن
+        box1.width = 10;
+        box1.height = 20;
+        box1.depth = 30;
+
+        box2.width = 5;
+        box2.height = 8;
+        box2.depth = 10;
+
+        // حساب وطباعة حجم الصندوق الأول
+        double volume1 = box1.CalculateVolume();
+        Console.WriteLine("Volume of box1: " + volume1);
+
+        // حساب وطباعة حجم الصندوق الثاني
+        double volume2 = box2.CalculateVolume();
+        Console.WriteLine("Volume of box2: " + volume2);
+    }
+}
+

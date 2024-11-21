@@ -352,3 +352,83 @@ class Program {
     }
 }
 
+
+
+############################
+
+تمرين
+
+using System;
+
+public class Rectangle
+{
+    // خصائص الطول والعرض (private)
+    private double length;
+    private double width;
+
+    // المنشئ الافتراضي الذي يعين قيم ابتدائية للطول والعرض
+    public Rectangle()
+    {
+        length = 10;  // القيمة الابتدائية للطول
+        width = 5;    // القيمة الابتدائية للعـرض
+    }
+
+    // منشئ مخصص يأخذ قيم للطول والعرض
+    public Rectangle(double l, double w)
+    {
+        length = l;
+        width = w;
+    }
+
+    // Setter للطول
+    public void SetLength(double l)
+    {
+        length = l;
+    }
+
+    // Getter للطول
+    public double GetLength()
+    {
+        return length;
+    }
+
+    // Setter للعرض
+    public void SetWidth(double w)
+    {
+        width = w;
+    }
+
+    // Getter للعرض
+    public double GetWidth()
+    {
+        return width;
+    }
+
+    // دالة لحساب المساحة
+    public double CalculateArea()
+    {
+        return length * width;
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // تعريف كائن من الصنف Rectangle واستخدام المنشئ المخصص
+        Rectangle paper = new Rectangle(10, 5);
+        
+        // تعريف كائن آخر باستخدام setter لتعيين الطول والعرض
+        Rectangle tissue = new Rectangle();
+        tissue.SetLength(15);  // تعيين الطول
+        tissue.SetWidth(7);    // تعيين العرض
+
+        // طباعة طول وعرض الكائن paper
+        Console.WriteLine("Paper Dimensions: Length = " + paper.GetLength() + ", Width = " + paper.GetWidth());
+        
+        // طباعة المساحة للكائن tissue
+        Console.WriteLine("Tissue Area: " + tissue.CalculateArea());
+    }
+}
+
+

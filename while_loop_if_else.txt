@@ -1,0 +1,3 @@
+Write a C# console application that asks the user to enter a number. The application should then use a while loop to repeatedly double the number until it is greater than 100. Finally, print the final number and the number of times it was doubled.
+
+Hint: You'll need variables to store the initial number, the doubled number, and a counter for the number of iterations.  Use Console.ReadLine() to get the initial number, and convert it to an integer. The while loop condition should check if the doubled number is less than or equal to 100.  Inside the loop, double the number and increment the counter.  Use Console.WriteLine() to display the results.
